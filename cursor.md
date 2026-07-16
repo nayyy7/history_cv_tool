@@ -9,10 +9,10 @@
 
 # 技术栈
 
-- 桌面壳 · Electron（真剪贴板监听）
+- 桌面壳 · Electron（真剪贴板监听 + 系统托盘）
 - 前端 · Next.js 14（静态导出）+ TypeScript strict
 - 样式 · Tailwind
-- 数据 · 仅本机会话内存；退出清空；超 24h 丢弃
+- 数据 · 本机会话内存；关窗进托盘保留；托盘退出/关机清空；超 24h 丢弃
 - 发布 · electron-builder NSIS（本地安装，不上 Vercel / Supabase）
 
 # 标准文件路径
@@ -26,11 +26,12 @@
 | 路线图 | [docs/04-execution-roadmap.md](./docs/04-execution-roadmap.md) |
 | 开发日规范 | [docs/05-dev-log-guide.md](./docs/05-dev-log-guide.md) |
 | 发布安装 | [docs/06-release.md](./docs/06-release.md) |
+| 交接 | [HANDOFFt.md](./HANDOFFt.md) |
 | 开发日日志 | [开发日/](./开发日/) |
 
 # 启动
 
-**日常**：安装 `dist\历史粘贴板 Setup 0.1.0.exe` 后双击 / 开机自启。
+**日常**：安装 `dist\历史粘贴板 Setup 0.2.0.exe` 后双击 / 开机自启。关窗进托盘，右键托盘可退出。
 
 **开发**：
 
@@ -55,4 +56,4 @@ npm run dist
 
 # 当前阶段
 
-打包 + 开机自启 **已完成**（D: 产出 NSIS 安装包；应用内可开关开机自启）
+**v0.2.0**：关窗进托盘后台保留记录；托盘退出 / 关机才清空。

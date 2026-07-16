@@ -14,7 +14,7 @@
 
 - 自动记录最近复制的**文字和图片**
 - 列表（时间降序）、置顶 / 删除 / 文字搜索、点击写回剪贴板（用户自行 Ctrl+V）
-- 数据只存本机会话；退出/关机清空；超 24h 丢弃
+- 数据只存本机会话；**关窗进托盘继续运行并保留记录**；托盘「退出」或关机清空；超 24h 丢弃
 - UI：简洁、浅粉色
 - **不要**云同步 / Supabase / Vercel 部署
 
@@ -39,6 +39,7 @@
 - [x] 置顶 / 删除 / 文字搜索
 - [x] 浅粉单列表 UI、空状态、「图片过大」占位
 - [x] 开机自启 IPC + `components/AutostartToggle.tsx`
+- [x] **v0.2.0** 关窗进托盘后台；托盘退出/关机才清空（`electron/tray.js`）
 
 ### 打包与路径迁移
 
@@ -46,7 +47,7 @@
 - [x] 在 D: 上 `next build`（`output: 'export'`）成功，产出 `out/`
 - [x] electron-builder 成功，安装包：
 
-  **`D:\vibe-coding\history_cv_tool\dist\历史粘贴板 Setup 0.1.0.exe`**（约 120MB）
+  **`D:\vibe-coding\history_cv_tool\dist\历史粘贴板 Setup 0.2.0.exe`**（重打包后）
 
 - [x] 发布说明：`docs/06-release.md`
 

@@ -74,7 +74,7 @@ export default function HomePage() {
           历史粘贴板
         </h1>
         <p className="mt-1 text-sm text-rose-600">
-          点击卡片写回剪贴板，再按 Ctrl+V 粘贴
+          点击卡片写回剪贴板，再按 Ctrl+V 粘贴。关闭窗口后仍在托盘后台记录；右键托盘选「退出」才会清空。
         </p>
         <AutostartToggle />
       </header>
